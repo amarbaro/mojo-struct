@@ -1,0 +1,21 @@
+src/pystruct/codec.mojo|return 8 if native else 4|return 8
+src/pystruct/codec.mojo|var align = 4 if c == ord("F") else (8 if c == ord("D") else size)|var align = size
+src/pystruct/codec.mojo|self.size = (self.size + align - 1) // align * align|self.size = self.size
+src/pystruct/codec.mojo|if c == ord(" ") or (c >= 9 and c <= 13):|if c == ord(" "):
+src/pystruct/codec.mojo|raise Error("repeat count given without format specifier")|raise Error("bad char in struct format")
+src/pystruct/codec.mojo|self.little = mode == ord("@") or mode == ord("=") or mode == ord("<")|self.little = mode == ord("<")
+src/pystruct/codec.mojo|if at + self.size > 0:|if at + self.size > 1:
+src/pystruct/codec.mojo|n = min(n, it.count - 1)|n = min(n, it.count)
+src/pystruct/codec.mojo|buf[at] = UInt8(min(n, 255))|buf[at] = UInt8(n)
+src/pystruct/codec.mojo|n = min(Int(buf[at]), n - 1)|n = Int(buf[at])
+src/pystruct/codec.mojo|if _signed(code) and v >= Int128(1) << Int128(8 * n - 1):|if False:
+src/pystruct/codec.mojo|return code == ord("b") or code == ord("h")|return code == ord("h")
+src/pystruct/codec.mojo|if isinf(y) and not isinf(x):|if False:
+src/pystruct/codec.mojo|if code == ord("e") and v.kind == Value.INT and|if False and
+src/pystruct/codec.mojo|if i < Int128(Int64.MIN) or i > (Int128(1) << 64) - 1:|if False:
+src/pystruct/codec.mojo|if i < lo or i > hi:|if i < lo:
+src/pystruct/codec.mojo|t = t or (v.kind == Value.BYTES and len(v.bytes) > 0)|t = t
+src/pystruct/codec.mojo|for j in range(at, at + self.size):|for j in range(at, at):
+src/pystruct/codec.mojo|if not v.kind == Value.BYTES or len(v.bytes) != 1:|if not v.kind == Value.BYTES:
+src/pystruct/codec.mojo|_narrow[DType.float32](z.re, "f") if not little else|_narrow[DType.float32](z.re, "f") if False else
+src/pystruct/codec.mojo|raise Error(t"not enough data to unpack {self.size} bytes at offset {offset}")|raise Error(t"unpack_from requires a buffer of at least {self.size + at} bytes for unpacking {self.size} bytes at offset {at} (actual buffer size is {len(buf)})")
