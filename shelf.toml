@@ -1,0 +1,4 @@
+name = "mojo-struct"
+version = "0.1.0"
+description = "Pack and unpack binary data like CPython struct"
+tags = ["mojo", "binary", "struct"]
