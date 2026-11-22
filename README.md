@@ -1,5 +1,7 @@
 # mojo-struct
 
+> **Moved:** this library now lives in [amarbaro/mojo-libs](https://github.com/amarbaro/mojo-libs/tree/main/libs/struct). This repository is read-only; issues and pull requests go there.
+
 <!-- badges -->
 <!-- /badges -->
 
